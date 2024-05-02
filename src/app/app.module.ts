@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ButtonComponent } from './components/button/button.component';
 import { LoginComponent } from './pages/login/login.component';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
-import {MatIconModule} from "@angular/material/icon";
-import {NgOptimizedImage} from "@angular/common";
-import {MatProgressSpinner} from "@angular/material/progress-spinner";
+import { MatIconModule } from "@angular/material/icon";
+import { NgOptimizedImage } from "@angular/common";
+import { MatProgressSpinner } from "@angular/material/progress-spinner";
+import { AngularFireModule } from "@angular/fire/compat";
+import { environment } from "../environments/environment";
+import { CrudComponent } from './pages/crud/crud.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import {MatProgressSpinner} from "@angular/material/progress-spinner";
     LoginComponent,
     HomeComponent,
     MenuComponent,
+    CrudComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,7 @@ import {MatProgressSpinner} from "@angular/material/progress-spinner";
     MatIconModule,
     NgOptimizedImage,
     MatProgressSpinner,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [
     provideAnimationsAsync()
