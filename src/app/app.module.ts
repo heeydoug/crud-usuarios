@@ -15,6 +15,14 @@ import { MatProgressSpinner } from "@angular/material/progress-spinner";
 import { AngularFireModule } from "@angular/fire/compat";
 import { environment } from "../environments/environment";
 import { CrudComponent } from './pages/crud/crud.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { MatTableModule } from "@angular/material/table";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatSortModule } from "@angular/material/sort";
+import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-user.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import { ModalFormUserComponent } from './pages/crud/modal-form-user/modal-form-user.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +32,9 @@ import { CrudComponent } from './pages/crud/crud.component';
     HomeComponent,
     MenuComponent,
     CrudComponent,
+    ModalViewUserComponent,
+    ModalFormUserComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -33,6 +44,12 @@ import { CrudComponent } from './pages/crud/crud.component';
     NgOptimizedImage,
     MatProgressSpinner,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatDialogModule,
   ],
   providers: [
     provideAnimationsAsync()
