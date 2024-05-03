@@ -47,7 +47,7 @@
             @if (user.healthPlan || user.dentalPlan){
               <mat-icon class="c-primary">check</mat-icon>
             }
-            @if (!user.healthPlan || !user.dentalPlan){
+            @if (!user.healthPlan && !user.dentalPlan){
               <mat-icon class="c-error">remove</mat-icon>
             }
 
@@ -58,8 +58,8 @@
           <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Ações </th>
           <td class="td-table" mat-cell *matCellDef="let user">
             <mat-icon class="icone-tabela" (click)="openModalViewUser(user)" >visibility</mat-icon>
-            <mat-icon class="icone-tabela">edit</mat-icon>
-            <mat-icon class="icone-tabela">delete</mat-icon>
+            <mat-icon class="icone-tabela" (click)="openModalEditUser(user)">edit</mat-icon>
+            <mat-icon class="icone-tabela" (dblclick)="deleteUser(user.firebaseId)">delete</mat-icon>
           </td>
         </ng-container>
 

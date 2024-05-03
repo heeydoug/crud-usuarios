@@ -16,14 +16,11 @@ export class ModalViewUserComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
   ) {
     this.userData = data;
-    console.log(data);
   }
-
 
   closeModal(){
     this.dialogRef.close();
   }
-
 
   protected readonly close = close;
 }

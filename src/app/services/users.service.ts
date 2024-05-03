@@ -21,7 +21,7 @@ export class UsersService {
   }
 
   updateUser(userId: string, user: User) {
-    return this.dataBaseStore.collection('users').doc('userId').update(user);
+    return this.dataBaseStore.collection('users').doc(userId).update(user);
   }
 
   deleteUser(userId: string) {

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ButtonComponent } from './components/button/button.component';
 import { LoginComponent } from './pages/login/login.component';
-import { FormsModule } from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MatIconModule } from "@angular/material/icon";
@@ -23,6 +23,8 @@ import { MatSortModule } from "@angular/material/sort";
 import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-user.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { ModalFormUserComponent } from './pages/crud/modal-form-user/modal-form-user.component';
+import {MatSelectModule} from "@angular/material/select";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -50,6 +52,9 @@ import { ModalFormUserComponent } from './pages/crud/modal-form-user/modal-form-
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatSnackBarModule
   ],
   providers: [
     provideAnimationsAsync()
